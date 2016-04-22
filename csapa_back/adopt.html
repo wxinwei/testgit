@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<title>认领养信息——录入</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<link href="css/reset.css" type="text/css" rel="stylesheet" />
+<link href="css/csapa_back.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/csapaback.js"></script>
+
+
+<script src="js/laydate/laydate.js" type="text/javascript"></script>
+<link href="js/laydate/skins/molv/laydate.css" type="text/css" rel="stylesheet">
+
+
+
+</head>
+<body>
+	<div class="csapa_top clearfix">
+		<!--名称-->
+		<h2><a href="javascript:;">中国小动物保护协会China Small Animal Protection Association</a></h2>
+		<!--个人中心入口-->
+		<div class="csapa_topinfo">
+			<div class="csapa_topcon">
+				<p>张某某<a href="">退出</a><span id="time"></span></p>
+			
+			</div>
+		</div>
+	</div>
+
+<div class="csapa_ifo clearfix">
+	<!--左侧start-->
+	<div class="csapaifo_lf">
+		<!--LOGO-->
+		<div class="csapaifo_lf_lfbox">		
+			<!--菜单-->
+				<ul class="navContent">
+					<li><dl><dt>动物信息</dt><dd><a href="index.html">录入</a><a href="index_mba.html">管理</a></dd></dl></li>
+					<li><dl><dt>健康防疫护理信息</dt><dd><a href="healthy.html">录入</a><a href="healthy_mba.html">管理</a></dd></dl></li>
+					<li><dl><dt>医疗信息</dt><dd><a href="treat.html">录入</a><a href="treat_mba.html">管理</a></dd></dl></li>
+					<li><dl><dt>死亡信息</dt><dd><a href="death.html">录入</a><a href="death_mba.html">管理</a></dd></dl></li>
+					<li><dl><dt>外出信息</dt><dd><a href="goout.html">录入</a><a href="goout_mba.html">管理</a></dd></dl></li>
+					<li class="current"><dl><dt>认领养信息</dt><dd><a href="adopt.html" class="on">录入</a><a href="adopt_mba.html">管理</a></dd></dl></li>
+					<li><dl><dt>基地人员信息</dt><dd><a href="person.html">录入</a><a href="person_mba.html">管理</a></dd></dl></li>
+				</ul>
+		</div>
+	</div>
+	<!--左侧end-->
+	<!--右侧start-->
+	<div class="csapaifo_rt">
+		<div class="caspaifo_rtbox" >
+			<div class="caspaifo_rtcon">
+				<div class="caspaifocon">
+					<h2>认领养信息——录入</h2>
+					<form class="registerform">
+						<div class="mba_searchbar ">
+							<span><strong>档案编号</strong><input type="text" name="name" class="txt w140" ></span>
+							<span><input type="button" value="查询" class="searbtn" ></span>
+						</div>
+						<div class="caspaform">
+							<ul>
+								<li>
+									<dl>
+										<dt>领养人姓名</dt>
+										<dd><input type="text" name="name" class="txt sort"></dd>
+									</dl>
+									<dl>
+										<dt>性别</dt>
+										<dd><label><input type="radio" name="sex" value="1">男</label><label><input type="radio" name="sex" value="2">女</label><span class="Validform_checktip">错误信息！</span></dd>
+									</dl>
+									<dl>
+										<dt>出生日期</dt>
+										<dd><input type="text" class="txt sort" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})"></dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>职业</dt>
+										<dd><input type="text" class="txt sort"></dd>
+									</dl>
+									<dl class="w490">
+										<dt>身份证号码</dt>
+										<dd><input type="text" class="txt  wmiddle"></dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>认领养日期</dt>
+										<dd><input type="text" class="txt sort" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" value="日期" ></dd>
+									</dl>
+									<dl>
+										<dt>办理日期</dt>
+										<dd><input type="text" class="txt sort" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" value="日期" ></dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>联系电话</dt>
+										<dd><input type="text" class="txt w120"  ></dd>
+									</dl>
+									<dl class="w490">
+										<dt>回访地址</dt>
+										<dd><input type="text" class="txt  wmiddle"></dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="w730">
+										<dt>回访日期</dt>
+										<dd><input type="text" class="txt sort mr5 fl" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" value="日期" >
+										
+										
+											<div class="jbhlbox">
+												<textarea type="text" class="txt" ></textarea>
+												<strong>情况说明</strong>
+											</div>
+										
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<p class="updatebtn"><input type="submit" value="提交"></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--右侧end-->
+</div>
+
+<div class="csapa_bottom"></div>
+</body>
+</html>

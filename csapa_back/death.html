@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<title>死亡信息——录入</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<link href="css/reset.css" type="text/css" rel="stylesheet" />
+<link href="css/csapa_back.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/csapaback.js"></script>
+
+
+<script src="js/laydate/laydate.js" type="text/javascript"></script>
+<link href="js/laydate/skins/molv/laydate.css" type="text/css" rel="stylesheet">
+
+
+
+</head>
+<body>
+	<div class="csapa_top clearfix">
+		<!--名称-->
+		<h2><a href="javascript:;">中国小动物保护协会China Small Animal Protection Association</a></h2>
+		<!--个人中心入口-->
+		<div class="csapa_topinfo">
+			<div class="csapa_topcon">
+				<p>张某某<a href="">退出</a><span id="time"></span></p>
+			
+			</div>
+		</div>
+	</div>
+
+<div class="csapa_ifo clearfix">
+	<!--左侧start-->
+	<div class="csapaifo_lf">
+		<!--LOGO-->
+		<div class="csapaifo_lf_lfbox">		
+			<!--菜单-->
+				<ul class="navContent">
+					<li><dl><dt>动物信息</dt><dd><a href="index.html">录入</a><a href="index_mba.html">管理</a></dd></dl></li>
+					<li><dl><dt>健康防疫护理信息</dt><dd><a href="healthy.html">录入</a><a href="healthy_mba.html">管理</a></dd></dl></li>
+					<li><dl><dt>医疗信息</dt><dd><a href="treat.html">录入</a><a href="treat_mba.html">管理</a></dd></dl></li>
+					<li class="current"><dl><dt>死亡信息</dt><dd><a href="death.html" class="on">录入</a><a href="death_mba.html">管理</a></dd></dl></li>
+					<li><dl><dt>外出信息</dt><dd><a href="goout.html">录入</a><a href="goout_mba.html">管理</a></dd></dl></li>
+					<li><dl><dt>认领养信息</dt><dd><a href="adopt.html">录入</a><a href="adopt_mba.html">管理</a></dd></dl></li>
+					<li><dl><dt>基地人员信息</dt><dd><a href="person.html">录入</a><a href="person_mba.html">管理</a></dd></dl></li>
+				</ul>
+		</div>
+	</div>
+	<!--左侧end-->
+	<!--右侧start-->
+	<div class="csapaifo_rt">
+		<div class="caspaifo_rtbox" >
+			<div class="caspaifo_rtcon">
+				<div class="caspaifocon">
+					<h2>死亡信息——录入</h2>
+					<form class="registerform">
+						<div class="mba_searchbar ">
+							<span><strong>芯片号/档案编号</strong><input type="text" name="name" class="txt w140" ></span>
+							<span><input type="button" value="查询" class="searbtn" ></span>
+						</div>
+						<div class="caspaform">
+							<ul>
+								<li>
+									<dl>
+										<dt>死亡日期</dt>
+										<dd><input type="text" class="txt w140" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" value="日期"></dd>
+									</dl>
+									<dl>
+										<dt>死亡原因</dt>
+										<dd><select name="" class="w140">
+										<option value="请选择">请选择</option>
+										<option value="老弱">老弱</option>
+										<option value="事故">事故</option>
+										<option value="疾病">疾病</option>
+										<option value="意外事故">意外事故</option>
+										<option value="打斗">打斗</option>
+										<option value="咬死">咬死</option>
+										</select></dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>死亡地点</dt>
+										<dd><select name="" class="w140"><option value="请选择">请选择</option><option value="医院">医院</option><option value="基地">基地</option><option value="其它">其它</option></select></dd>
+									</dl>
+									<dl>
+										<dt>处理方式</dt>
+										<dd><select name="" class="w140">
+										<option value="请选择">请选择</option>
+										<option value="医院">医院</option>
+										<option value="埋">埋</option>
+										<option value="火化">火化</option>
+										<option value="其它">其它</option>
+										</select></dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<p class="updatebtn"><input type="submit" value="提交"></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--右侧end-->
+</div>
+
+<div class="csapa_bottom"></div>
+</body>
+</html>
