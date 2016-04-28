@@ -9,9 +9,9 @@ address, caption, cite, code, dfn, em, strong, th, var {    font-weight: normal;
 .barcon2{height:225px;background:url(../images/banner_con2.jpg) left top no-repeat;}
 .bg_white{background:white;height:auto;overflow:hidden;zoom:1;}
 .borbtm{border-bottom:2px solid #f0f0f0;}
-.navbtn{height:60px;background:white;width:1000px;margin:0 auto;text-align:center;overflow:hidden;zoom:1;padding:47px 0}
-.navbtn a{display:inline-block;width:190px;height:60px;text-align:center;color:white;font:bold 24px/60px Microsoft Yahei;text-decoration:none;background:#009c5e;margin:0 40px;letter-spacing: 3px;border-radius:4px;}
-.navbtn a.last{background:#c0a447;}
+.navbtn{height:60px;background:white;width:1000px;margin:0 auto;text-align:center;overflow:hidden;zoom:1;padding:47px 0;position:relative;}
+.navbtn .navbtnfira{display:inline-block;width:190px;height:60px;text-align:center;color:white;font:bold 24px/60px Microsoft Yahei;text-decoration:none;background:#009c5e;margin:0 40px;letter-spacing: 3px;border-radius:4px;}
+.navbtn .navbtnfira.last{background:#c0a447;}
 
 .conwarp2{width:1000px;margin:0 auto;}
 .ptb20{padding:20px 0}
@@ -50,7 +50,7 @@ address, caption, cite, code, dfn, em, strong, th, var {    font-weight: normal;
 .mespart{background:#dfd2a3 url(../images/mesbarimg.png) center top no-repeat;height:109px;text-indent:-99999em;}
 
 .lastpart{background:#e6e6e6;padding:25px 0;height:auto;overflow:hidden;zoom:1}
-.mesconwarp{border:1px solid #707070;height:500px;padding:0 15px 15px 15px;overflow-y:auto;background:white;margin-bottom:20px;}
+.mesconwarp{border:1px solid #707070;height:500px;padding:0 15px 15px 15px;overflow-y:auto;background:white;margin-bottom:20px;position:relative;}
 
 .lastpart h2{display:block;margin-bottom:15px;height:30px;font-weight:bold;font-size:24px;line-height:30px;color:#c0a447;}
 .lastpart h3{display:block;margin-bottom:15px;height:30px;font-weight:bold;font-size:18px;line-height:30px;color:#9e9f9a;}
@@ -65,10 +65,10 @@ address, caption, cite, code, dfn, em, strong, th, var {    font-weight: normal;
 
 
 
-.mescon{height:auto;}
+.mescon{height:auto;font-size:14px;}
 .mescon ul{list-style:none;}
 .mescon ul li{padding:20px 0;border-bottom:1px solid #aaaaaa}
-.mescon ul li dl{display:block;height:auto;}
+.mescon ul li dl{display:block;height:auto;overflow:hidden;zoom:1;}
 .mescon ul li dl dt{display:block;height:30px;line-height:30px;font-family:Microsoft Yahei;padding-bottom:5px;position:relative;}
 .mescon ul li dl dt strong{color:#c0a447;display:inline-block;padding-right:30px;font-weight:normal;font-size:14px;}
 .mescon ul li dl dt var{color:#b2b2b2;font-style:normal;}
@@ -77,5 +77,11 @@ address, caption, cite, code, dfn, em, strong, th, var {    font-weight: normal;
 
 
 .textareatxt{padding: 2px;line-height: 20px;display:block;width:200px;height:30px;position:absolute;left:4px;top:4px;background:white;font-size:14px;color:#999;}
+
+.tenyearcon{position:absolute;height:40px;width:900px;top:107px;padding-top:12px;left:50px;display:none;}
+.tenyearcon i{position:absolute;height:12px;width:22px;top:0;padding-top:12px;right:163px;display:block;background:url(../images/tipsimg.png) no-repeat;}
+.tenyearcon p{height:34px;line-height:34px;background:#d1d1d1;text-align:center;}
+.tenyearcon p a{display:inline-block;margin:0 15px;color:#5e5e5e;text-decoration:none;font-size:16px;}
+.tenyearcon p a:hover{color:#a48314}
 
 .conwarp{width:1000px;margin:0 auto;height:auto;overflow:hidden;zoom:1;}

@@ -24,12 +24,50 @@
 
 <div class="bg_white borbtm">
 	<div class="navbtn">
-		<a href="#event" title="参与活动" >参与活动</a>
-		<a href="#mes" title="祝福互动" >祝福互动</a>
-		<a href="http://www.cku.org.cn/introduced/history.asp" target="_blank" title="十年回首" class="last">十年回首</a>
+		<a href="#event" title="参与活动"  class="navbtnfira">参与活动</a>
+		<a href="#mes" title="祝福互动"   class="navbtnfira">祝福互动</a>
+		
+		
+		<a href="javascript:;" title="十年回首" class="navbtnfira last">十年回首</a>		
+		<div class="tenyearcon">
+			<i></i>
+			<p>
+				<a href="/introduced/history.asp#2006" target="_blank">2006</a>
+				<a href="/introduced/history.asp#2007" target="_blank">2007</a>
+				<a href="/introduced/history.asp#2008" target="_blank">2008</a>
+				<a href="/introduced/history.asp#2009" target="_blank">2009</a>
+				<a href="/introduced/history.asp#2010" target="_blank">2010</a>
+				<a href="/introduced/history.asp#2014" target="_blank">2011</a>
+				<a href="/introduced/history.asp#2012" target="_blank">2012</a>
+				<a href="/introduced/history.asp#2013" target="_blank">2013</a>
+				<a href="/introduced/history.asp#2014" target="_blank">2014</a>
+				<a href="/introduced/history.asp#2015" target="_blank">2015</a>
+				<a href="/introduced/history.asp#2016" target="_blank">2016</a>
+			</p>
+		</div>
 	</div>
 </div>
 
+<script>
+$(function() {
+	var tentimer = null;
+	$(".navbtnfira.last").hover(function() {
+		clearTimeout(tentimer);
+		$('.navbtnfira.last').next('div').show();
+	},function() {
+		tentimer = setTimeout(function() {
+			$('.navbtnfira.last').next('div').hide();
+		}, 500);
+	});
+ 
+	$('.navbtnfira.last').next('div').hover(function() {
+		clearTimeout(tentimer);
+	},function() {
+		$(this).hide();    
+	});
+ });
+
+</script>
 
 <div class="bg_white">
 
@@ -231,7 +269,6 @@
 				<var class="textareatxt">在此写下您的祝福！</var>
 				<textarea id="addtextarea" onfocus="selectextarea()" onblur="blurtextarea()"></textarea>
 			</p>
-			
 			<script>
 				$(".textareatxt").click(function(){
 					$(this).hide();
@@ -249,9 +286,6 @@
 					}
 				}
 			</script>
-			
-			
-			
 			<p class="meswritbtn">
 				<input type="button" value="发表评论" />
 			</p>

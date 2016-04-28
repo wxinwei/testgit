@@ -6,8 +6,7 @@
 	username=trim(Request.Cookies(Forum_sn)("username"))
 	cku_id=trim(Request.Cookies(Forum_sn)("cku_id"))
 	newsid=1373
-%>
-<!doctype html>
+%><!doctype html>
 <html>
 <head>
 <meta charset="gb2312">
@@ -15,28 +14,26 @@
 <link rel="stylesheet" href="/css/default.css">
 <link href="/css/nav.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="css/cku10.css" type="text/css">
-<script type="text/javascript" src="http://www.cku.org.cn/js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="/js/jquery-1.8.3.js"></script>
 <script type="text/javascript"> 
 		$(document).ready(function(){
 			$("#replyHref").click(function(){
-				username='<%=username%>';
-				if(username=='')
-				{
+				var username='<%=username%>';
+				if(username==''){
 					alert('请先登录再评价!');
 					window.location.href='/reg/login.asp?comeurl=/zhuanti/10year';
-				}
-				else
-				{
+				}else{
+					var t='<%=isCkuUser(cku_id)%>';
+					if(t=='0'){
+						alert('CKU有效会员才能评论!');
+						return false;
+					}
 					var addtextarea=$("#addtextarea").val().replace(/\n|\r\n/g,"<br />"); 
-					//var addtextarea=$("#addtextarea").val();
-					if(addtextarea=='')
-					{
+					if(addtextarea==''){
 						alert('请说点话吧!');
 						$("#addtextarea").focus();
 						return false;	
-					}
-					else
-					{
+					}else{
 						$.ajax({
 								   url:'pinglun.asp',
 								   type: "POST",
@@ -46,7 +43,10 @@
 									   newsid:'<%=newsid%>',
 									   username:escape('<%=username%>')
 									   }),
-								   beforeSend:function(){$("#replyHref").text("正在提交中");},
+								   beforeSend:function(){
+									//$("#replyHref").text("正在提交中");
+									$("#replyHref").attr('text','正在提交中');
+									},
 								   success:function(data){
 									  	var data=eval(data);
 										
@@ -54,7 +54,7 @@
 									   {
 										   alert('提交成功!');
 										   
-										   	html="<li>"
+										   	var html="<li>"
 											html=html+"<dl>"
 											html=html+"<dt>"
 											html=html+"<strong>"+data.username+"</strong><var>"+data.addtime+"</var>"
@@ -77,6 +77,7 @@
 											$("#addtextarea").val('');
 									   }
 									 }
+									// error: function(){alert(222)}
                                });	
 					}
 						
@@ -132,12 +133,48 @@
 
 <div class="bg_white borbtm">
 	<div class="navbtn">
-		<a href="#event" title="参与活动" >参与活动</a>
-		<a href="#mes" title="祝福互动" >祝福互动</a>
-		<a href="http://www.cku.org.cn/introduced/history.asp" target="_blank" title="十年回首" class="last">十年回首</a>
+		<a href="#event" title="参与活动"  class="navbtnfira" >参与活动</a>
+		<a href="#mes" title="祝福互动"   class="navbtnfira">祝福互动</a>
+		<a href="javascript:;" title="十年回首" class="navbtnfira last">十年回首</a>		
+		<div class="tenyearcon">
+			<i></i>
+			<p>
+				<a href="/introduced/history.asp#a2006" target="_blank">2006</a>
+				<a href="/introduced/history.asp#a2007" target="_blank">2007</a>
+				<a href="/introduced/history.asp#a2008" target="_blank">2008</a>
+				<a href="/introduced/history.asp#a2009" target="_blank">2009</a>
+				<a href="/introduced/history.asp#a2010" target="_blank">2010</a>
+				<a href="/introduced/history.asp#a2014" target="_blank">2011</a>
+				<a href="/introduced/history.asp#a2012" target="_blank">2012</a>
+				<a href="/introduced/history.asp#a2013" target="_blank">2013</a>
+				<a href="/introduced/history.asp#a2014" target="_blank">2014</a>
+				<a href="/introduced/history.asp#a2015" target="_blank">2015</a>
+				<a href="/introduced/history.asp#a2016" target="_blank">2016</a>
+			</p>
+		</div>
 	</div>
 </div>
 
+<script>
+$(function() {
+	var tentimer = null;
+	$(".navbtnfira.last").hover(function() {
+		clearTimeout(tentimer);
+		$('.navbtnfira.last').next('div').show();
+	},function() {
+		tentimer = setTimeout(function() {
+			$('.navbtnfira.last').next('div').hide();
+		}, 500);
+	});
+ 
+	$('.navbtnfira.last').next('div').hover(function() {
+		clearTimeout(tentimer);
+	},function() {
+		$(this).hide();    
+	});
+ });
+
+</script>
 
 <div class="bg_white">
 
